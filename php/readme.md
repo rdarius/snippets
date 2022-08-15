@@ -1,2 +1,2 @@
 # PHP
-2. [CORS](https://github.com/rdarius/snippets/php/cors)
+[PHP - CORS](https://github.com/rdarius/snippets/tree/master/php/cors)
