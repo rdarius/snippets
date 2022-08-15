@@ -8,8 +8,17 @@ header('Access-Control-Allow-Origin: *');
 
 ### Allow requests from specific origins
 
+to enable cors for multiple origins you should do a check on PHP
+side if origin is in the list, then enable cors on that request
+to allow that specific origin
 ```injectablephp
-header('Access-Control-Allow-Origin: *');
+$allowOrigins = [
+  'https://example.com',
+  'https://api.example.com'
+];
+if (in_array($_SERVER['HTTP_ORIGIN'], $allowOrigins)) {
+  header('Access-Control-Allow-Origin: ' . $_SERVER['HTTP_ORIGIN']);
+}
 ```
 
 
