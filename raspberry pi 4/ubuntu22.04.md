@@ -8,7 +8,7 @@ sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y
 Install raspberry utils:
 
 ```sh
-sudo apt install -y linux-modules-extra-raspi && reboot
+sudo apt install -y linux-modules-extra-raspi && sudo reboot
 ```
 
 Add to the end of `/boot/firmware/config.txt`:
@@ -25,6 +25,12 @@ Add to the end of `/boot/firmware/cmdline.txt`:
 
 ```
 cgroup_memory=1 cgroup_enable=memory
+```
+
+Reboot:
+
+```sh
+sudo reboot
 ```
 
 
