@@ -10,6 +10,7 @@ Install raspberry utils:
 ```sh
 sudo apt install -y linux-modules-extra-raspi && sudo reboot
 ```
+[Overlcock](https://beebom.com/how-overclock-raspberry-pi-4/)
 
 Add to the end of `/boot/firmware/config.txt`:
 
