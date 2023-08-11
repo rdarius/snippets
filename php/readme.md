@@ -2,27 +2,26 @@
 [PHP - CORS](https://github.com/rdarius/snippets/tree/master/php/cors)
 
 
-# Settings
 
-## Cahnge Memory Limit
+### Cahnge Memory Limit
 ```php
 ini_set('memory_limit', '256M'); // set the limit
 ini_set('memory_limit', '-1'); // remove limits
 ```
 ---
-## Display All Errors
+### Display All Errors
 ```php
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 ```
 ---
-## Change execution time limit
+### Change execution time limit
 ```php
 set_time_limit(360000);
 ```
 ---
-## CORS
+### CORS
 ```php
 /* Handle CORS */
 
@@ -43,3 +42,23 @@ if (strtolower($_SERVER['REQUEST_METHOD']) == 'options') {
     exit();
 }
 ```
+---
+### Get raw request body
+```php
+file_get_contents('php://input');
+```
+---
+### POST Curl
+```php
+$fields = [
+    'some' => 'data',
+];
+$fields_string = http_build_query($fields);
+$ch = curl_init();
+curl_setopt($ch,CURLOPT_URL, 'https://url.here');
+curl_setopt($ch,CURLOPT_POST, true);
+curl_setopt($ch,CURLOPT_POSTFIELDS, $fields_string);
+curl_setopt($ch,CURLOPT_RETURNTRANSFER, true);
+curl_exec($ch);
+```
+---
