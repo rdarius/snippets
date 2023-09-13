@@ -17,3 +17,9 @@ ffmpeg -i input.mp4 output.mp4
 ```bash
 ffmpeg -i input.mp4 output.mp3
 ```
+
+## Convert Video using CUDA
+
+```bash
+ffmpeg -y -vsync 0 -hwaccel cuda -hwaccel_output_format cuda -i input.mp4 -c copy output.mp4
+```
